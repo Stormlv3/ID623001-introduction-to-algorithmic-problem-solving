@@ -121,49 +121,59 @@ Add a trigger `box collider` to the `Hay` prefab.
 Add a script to `Sheep` that looks something like this:
 
 ```csharp
-public float runSpeed; 
-public float gotHayDestroyDelay; 
-public float dropDestroyDelay; 
-private bool hitByHay;
-private bool dropped;
-private Collider myCollider; 
-private Rigidbody myRigidbody; 
-
-private void Update() {
-    // Move forwards
-    transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
-}
-
-private void HitByHay()
+public class Sheep : MonoBehaviour
 {
-    // Stop moving and then destroy after a delay.
-    hitByHay = true; 
-    runSpeed = 0;
+    public float runSpeed;
+    public float dropDestroyDelay;
+    private bool dropped;
+    private Collider myCollider;
+    private Rigidbody myRigidbody;
 
-    Destroy(gameObject, gotHayDestroyDelay);
-}
-
-private void Drop()
-{
-    // Make gravity start affecting us, then destroy after a delay.
-    dropped = true;
-    myRigidbody.isKinematic = false; 
-    myCollider.isTrigger = false; 
-    Destroy(gameObject, dropDestroyDelay); 
-}
-
-private void OnTriggerEnter(Collider other) 
-{
-    // If we collided with hay:
-    if (other.CompareTag("Hay") && !hitByHay) 
+    private void Awake()
     {
-        Destroy(other.gameObject); 
-        HitByHay(); 
+        // GetComponent is a special Unity function that gets a reference to a component
+        // that is also on this same GameObject. The type provided in the < > is what
+        // type of component the function will look for.
+        //
+        // Tip: If the component that you want is on a child of this GameObject, you can
+        // use GetComponentInChildren<>()
+        myCollider = GetComponent<BoxCollider>();
+        myRigidbody = GetComponent<Rigidbody>();
     }
-    // If we collided with the edge of the map:
-    else if (other.CompareTag("DropSheep") && !dropped)
+
+    private void Update()
     {
-        Drop();
+        // Move forwards
+        transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
+    }
+
+    private void HitByHay()
+    {
+        Destroy(gameObject);
+    }
+
+    private void Drop()
+    {
+        // Make gravity start affecting us, then destroy after a delay.
+        dropped = true;
+        myRigidbody.isKinematic = false;
+        myCollider.isTrigger = false;
+        Destroy(gameObject, dropDestroyDelay);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // If we collided with hay:
+        if (other.CompareTag("Hay"))
+        {
+            Destroy(other.gameObject);
+            HitByHay();
+        }
+        // If we collided with the edge of the map:
+        else if (other.CompareTag("DropSheep") && !dropped)
+        {
+            Drop();
+        }
     }
 }
 ```
@@ -172,3 +182,9 @@ private void OnTriggerEnter(Collider other)
 ## Task 3: Sheep invasion
 
 Now that our sheep is working, do your own research and figure out how to spawn sheep over time (remember `GameObject.Instantiate`)
+
+Some suggestions:
+- We should have a `GameObject` in our scene that is in charge of managing the sheep. Call it something like `Sheep Manager`
+- This `Sheep Manager` should have a script attached to it. This script should do a couple of things:
+    - Store a public reference to the Sheep prefab.
+    - Instantiate that sheep prefab at a set interval, along the far side of the field.

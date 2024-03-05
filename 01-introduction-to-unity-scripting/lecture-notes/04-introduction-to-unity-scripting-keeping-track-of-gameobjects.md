@@ -111,31 +111,92 @@ public class FactoryManager() {
 }
 ```
 
+## Defining our own Unity Events
+
+`UnityEvent` is great, but sometimes we need to provide **additional information** when we fire an event. We can define our **own versions** of Unity Events that take in specific **parameters**, or additional pieces of information that can add context to that event. 
+
+In our chocolate factory worker example, using a default Unity Event would translate to something like this:
+
+> "I found a dead rat in the chocolate".
+
+If we added a parameter to the event to specify which conveyor belt we found the dead rat on, then it would read something like:
+
+> "I found a dead rat in the chocolate on conveyer belt #7".
+
+Alright, enough about dead rats.
+
+As the developers, we get to decide whatever additional pieces of information will help the listeners of an event to know what to do with it.
+
+How to do this in our code:
+
+```csharp
+public class Sheep {
+    // Defines our own special type of event. 
+    // We are calling it SheepEvent, and it takes a parameter of type Sheep.
+    public class SheepEvent : UnityEvent<Sheep> { }
+
+    // Both of these events are of type SheepEvent, so when we call them we have to provide a sheep instance.
+    public SheepEvent OnAteHay = new SheepEvent();
+    public SheepEvent OnDropped = new SheepEvent();
+
+    public void EatHay() {
+        // When we fire the event, we provide 'this' as a parameter. In C#, the 'this' keyword refers to 
+        // the current instance of the object (in this case it will be of type Sheep, because this is
+        // happening in the Sheep script).
+        OnAteHay?.Invoke(this);
+    }
+
+    public void Drop() {
+        OnDropped?.Invoke(this);
+    }
+}
+
+public class SheepManager {
+    public Sheep SheepPrefab;
+
+    // Other code here...
+
+    public void SpawnSheep() {
+        Sheep newSheep = Instantiate(SheepPrefab);
+        newSheep.OnAteHay.AddListener(HandleSheepAteHay);
+        newSheep.OnDropped.AddListener(HandleSheepDropped);
+    }
+
+    private void HandleSheepAteHay(Sheep sheep) {
+        // The "sheep" variable will refer to the sheep who called this event!
+        // We can now do whatever we want with this sheep.
+    }
+
+    private void HandleSheepAteHay(Sheep sheep) {
+        // The "sheep" variable will refer to the sheep who called this event!
+        // We can now do whatever we want with this sheep.
+    }
+}
+```
 
 ## Using lists and events to manage our game state
 
 Here we will have a collaborative problem solving session, thinking about how we would go about making a sheep spawning system that keeps track of all the sheep in the game.
 
 
-
-
 <details>
 <summary>Sheep Spawner Solution</summary>
 
-Set up a Game Object `Sheep Spawner` and give it as many empty children as you want. These empty Game Objects will be used as spawn positions for the sheep.
+Set up a Game Object `Sheep Manager` and give it as many empty children as you want. These empty Game Objects will be used as spawn positions for the sheep.
 
 Give `Sheep Spawner` a script along these lines:
 
+**Note that this script will throw a compilation error** if you just copy + paste it. You will need to set up events in your `Sheep` script. The sheep should have an event for when it eats hay, and when it drops off the map. I will leave those up to you to implement :)
 
 
 ```csharp
 public bool canSpawn = true; 
 
-public GameObject sheepPrefab; 
+public Sheep sheepPrefab; 
 public List<Transform> sheepSpawnPositions = new List<Transform>(); 
 public float timeBetweenSpawns; 
 
-private List<GameObject> sheepList = new List<GameObject>(); 
+private List<Sheep> sheepList = new List<Sheep>(); 
 
 private void Start() 
 {
@@ -145,19 +206,20 @@ private void Start()
 private void SpawnSheep()
 {
     Vector3 randomPosition = sheepSpawnPositions[Random.Range(0, sheepSpawnPositions.Count)].position; 
-    GameObject sheep = Instantiate(sheepPrefab, randomPosition, sheepPrefab.transform.rotation); 
+    Sheep sheep = Instantiate(sheepPrefab, randomPosition, sheepPrefab.transform.rotation); 
     sheep.OnEatenHay.AddListener(HandleSheepEatenHay);
     sheep.OnDropped.AddListener(HandleSheepDropped);
     sheepList.Add(sheep);
 }
 
-private void HandleSheepEatenHay(GameObject sheep) {
+private void HandleSheepEatenHay(Sheep sheep) {
     sheepList.Remove(sheep);
     // Later we could add some points here.
 }
 
-private void HandleSheepDropped(GameObject sheep) {
+private void HandleSheepDropped(Sheep sheep) {
     sheepList.Remove(sheep);
+    // later, we could subtract lives here.
 }
 
 private IEnumerator SpawnRoutine() 
@@ -168,16 +230,9 @@ private IEnumerator SpawnRoutine()
         yield return new WaitForSeconds(timeBetweenSpawns); 
     }
 }
-
-public void DestroyAllSheep()
-{
-    foreach (GameObject sheep in sheepList)
-    {
-        Destroy(sheep);
-    }
-
-    sheepList.Clear();
-}
 ```
+In editor, assign each of your empty `GameObjects` that you set up to be spawn points to the `sheepSpawnPositions` array.
+Assign the `Sheep` prefab from your project window **NOT FROM THE SCENE!**
+
 
 </details>
