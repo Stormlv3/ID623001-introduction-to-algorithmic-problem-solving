@@ -82,7 +82,7 @@ Here is an example script showing two classes. The `FactoryWorker` class declare
 ```csharp
 using UnityEngine.EventSystem;
 
-public class FactoryWorker {
+public class FactoryWorker : MonoBehaviour {
     // Declare the event.
     public UnityEvent OnRatFoundInChocolate = new UnityEvent();
 
@@ -94,7 +94,7 @@ public class FactoryWorker {
     }
 }
 
-public class FactoryManager() {
+public class FactoryManager : MonoBehaviour {
     // The manager is keeping an eye on the worker.
     private FactoryWorker factoryWorker;
     
@@ -130,8 +130,8 @@ As the developers, we get to decide whatever additional pieces of information wi
 How to do this in our code:
 
 ```csharp
-public class Sheep {
-    // Defines our own special type of event. 
+public class Sheep : MonoBehaviour {
+    // Defines our own special type of event.
     // We are calling it SheepEvent, and it takes a parameter of type Sheep.
     public class SheepEvent : UnityEvent<Sheep> { }
 
@@ -143,7 +143,7 @@ public class Sheep {
         // When we fire the event, we provide 'this' as a parameter. In C#, the 'this' keyword refers to 
         // the current instance of the object (in this case it will be of type Sheep, because this is
         // happening in the Sheep script).
-        OnAteHay?.Invoke(this);
+        OnAteHay?.Invoke(this); // The ? just means to fire the event if it has any listeners.
     }
 
     public void Drop() {
@@ -151,7 +151,7 @@ public class Sheep {
     }
 }
 
-public class SheepManager {
+public class SheepManager : MonoBehaviour {
     public Sheep SheepPrefab;
 
     // Other code here...
