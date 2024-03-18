@@ -167,7 +167,7 @@ public class SheepManager : MonoBehaviour {
         // We can now do whatever we want with this sheep.
     }
 
-    private void HandleSheepAteHay(Sheep sheep) {
+    private void HandleSheepDropped(Sheep sheep) {
         // The "sheep" variable will refer to the sheep who called this event!
         // We can now do whatever we want with this sheep.
     }
