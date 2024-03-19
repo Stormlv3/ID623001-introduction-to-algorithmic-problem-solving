@@ -43,7 +43,7 @@ public int Money {
 
 ```
 
-`Money` is a public accessor for the private variable `money`. It behaves like a sort of interface between `money` and the rest of our code - that is - it performs additional instructions when we read or modify the `money` variable. (We modify `money` through `Money`, which I'll show in a moment).
+`Money` is a public accessor for the private variable `money`. It behaves like a sort of interface between `money` and us, the programmers - that is - it performs additional instructions when we read or modify the `money` variable. (We modify `money` through `Money`, which I'll show in a moment).
 
 What happens when we read or write `Money` is defined by the `get {}` and `set {}` code blocks. These code blocks are referred to as `getters` and `setters`. Whatever code you put inside the parentheses will be executed when `Money` is read or modified respectively.
 
@@ -55,7 +55,7 @@ You might've noticed that `set { money = value; ...` has something weird about i
 Money = 125;
 ```
 
-, then `value` would be `125`.
+, then `value` in my `set { }` block would be `125`.
 
 We now interact with the `money` variable through the `Money` accessor, just like we would interact with a normal variable:
 
@@ -165,7 +165,7 @@ public class MonsterData : MonoBehaviour
 {
     public List<MonsterLevel> levels; // Start by defining 3 of these in the editor, 1 for each monster visualization.
 
-    private MonsterLevel currentLevel;
+    private MonsterLevel currentLevel; // We won't modify this directly, instead we'll use the CurrentLevel accessor.
 
     // Sets our level to the first level when this GameObject is enabled.
     public void OnEnable()
@@ -306,7 +306,7 @@ public class MonsterData : MonoBehaviour
 
 </details>
 
-Now that our monsters can track their levels, our `MonsterSlot` should tell the monster to increase its level when the `MonsterSlot` is clicked (if there's a monster associated with it, and that monster can be upgraded)
+Now that our monsters can track their levels, our `MonsterSlot` should tell the monster to increase its level when the `MonsterSlot` is clicked (if there's a monster associated with it, and that monster can be upgraded).
 
 The next part of this task is to add to `MonsterSlot` and implement the commented code blocks:
 
@@ -337,6 +337,8 @@ public class MonsterSlot : MonoBehaviour
   }
 }
 ```
+
+We have already implemented the required methods in our MonsterData class, now it's just a matter of using them correctly.
 
 **Attempt a solution before you look at the solution example.**
 
