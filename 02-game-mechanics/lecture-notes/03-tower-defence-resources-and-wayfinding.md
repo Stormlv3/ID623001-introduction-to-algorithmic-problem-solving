@@ -235,6 +235,8 @@ public class Enemy : MonoBehaviour
 
 Place your enemy prefab in the scene and ensure that it moves through the waystations as intended when you run your game.
 
+## Task 4: Spawning
+
 Lastly, set up an enemy spawner like we did with the sheep spawner in the previous project. Bear in mind that the enemy spawner will need to provide the enemies with the list of waypoints for them to navigate when they are instantiated.
 
 <details>
