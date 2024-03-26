@@ -110,7 +110,7 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator Start ()
     {
         // Current wave index will be incremented once we've spawned all the enemies for this wave.
-        while (currentWaveIndex <= waves.Length-1)
+        while (currentWaveIndex < waves.Length)
         {
             OnWaveStarted?.Invoke(); // Fire an event that we'll hook into later.
             for (var i = 0; i < waves[currentWaveIndex].maxEnemies; i++)
@@ -127,6 +127,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnEnemy()
     {
+        // Looks at the current wave to determine which enemy we should spawn.
         Enemy newEnemy = Instantiate(waves[currentWaveIndex].enemyPrefab, transform.position, Quaternion.identity);
         newEnemy.waypoints = waypoints;
     }
@@ -153,7 +154,7 @@ There are some Game Objects already set up in our scene to help with this:
 In our `UserInterface.cs` script, let's implement the following features:
 
 - Whenever a new wave starts (and at the start of the game), update the text of `WaveLabel` to reflect the current wave (e.g. if `EnemySpawner.currentWaveIndex` is 0, `WaveLabel` should read: "Wave: 1", etc.)
-    - Your user interface will need a reference to the enemy spawner (so that it can listen to the wave started event).
+    - Your user interface will need a reference to the `EnemySpawner` (so that it can listen to the "wave started" event).
     - It will also need a reference to the `WaveLabel` text object.
 
 - Whenever a new wave starts, play the slide in animation for both the top and bottom `NextWave` labels.
@@ -198,6 +199,8 @@ public class UserInterface : MonoBehaviour
     private void HandleWaveStarted()
     {
         waveLabel.text = "WAVE: " + (EnemySpawner.CurrentWaveIndex + 1).ToString();
+        // Fire off the animation for both label halves. When played at the same time, these
+        // create a flashy effect.
         topHalfWaveStartLabel.SetTrigger("nextWave");
         bottomHalfWaveStartLabel.SetTrigger("nextWave");
     }
@@ -206,7 +209,7 @@ public class UserInterface : MonoBehaviour
 
 </details>
 
-If set up correctly, we should see an accurate wave counter in the top-right of the screen, and a cool "Wave Started" text animation every time a wave starts.
+If set up correctly, we should see an accurate wave counter in the top-right of the screen, and a sweet "Wave Started" text animation every time a wave starts.
 
 
 ## Task 3: Health and Loss States
@@ -252,9 +255,9 @@ public int Health
 Finally, implement the following features:
 
 - Start the player with 5 health.
-- Update the "Health" label in the top left corner of the screen whenever our health value is modified (This should be the job of our `UserInterface` script)
+- Update the "Health" label in the top left corner of the screen whenever our health value is modified (This should be the job of our `UserInterface` script).
 - Decrement (decrease by one) the player's health whenever an enemy reaches the cookie (you can use a trigger collider on the cookie, or make this happen when the enemy reaches their final waypoint).
-- Play the Game Over animation when the player's health reaches 0 (there is an `Animator` attached to the `GameOverLabel` script. You'll need to call `.SetTrigger("gameOver")` on it to fire the animation. This is also the responsibility of `UserInterface`.)
+- Play the Game Over animation when the player's health reaches 0 (there is an `Animator` attached to the `GameOverLabel` script. You'll need to call `.SetTrigger("gameOver")` on it to fire the animation. This is also the responsibility of `UserInterface`).
 
 ## Bonus Task
 
@@ -262,4 +265,4 @@ Finally, implement the following features:
 
 ## Conclusion
 
-We now have a solid foundation for expanding our game with harder waves and more powerful enemies. In your assessment tasks, you will be provided with some starter code which you will need to expand upon to get the player fighting back against the enemies.
+We now have a solid foundation for expanding our game with harder waves and more powerful enemies. In your assessment tasks, you will be provided with some starter code which you will need to expand upon to get the player fighting back against the enemies. Finally, we will have our vengeance for all those eaten cookies!
