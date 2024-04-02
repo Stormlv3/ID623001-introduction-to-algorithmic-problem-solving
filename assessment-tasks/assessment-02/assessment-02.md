@@ -10,17 +10,17 @@ There are different methods for creating health bars, such as overlaying UI elem
 
 Setup:
 - Using the assets **Images\Objects\HealthBarBackground** and **Images\Objects\HealthBar**, create a health bar object that is childed to the **Enemy** prefab.
-- The background should be a direct child of the enemy.
-- The health bar itself should be a child of the background.
+- The **background** should be a direct child of the **enemy.**
+- The **health bar** itself should be a child of the background.
 - You may need to reposition the health bar background to have it display above the enemy.
-- You will need to adjust the x scale and position of the health bar object to make it stretch across the length of the background.
+- You will need to adjust the **x scale** and **position** of the health bar object to make it stretch across the length of the background.
 - Add a `SortingGroup` component to the health bar background. This will group all child `SpriteRenderer`s together and make them display in the order that they appear in the hierarchy. This will ensure that your health bar object always appears in front of the background.
 
 > Check the **resources** folder for an example of how the final health bar should look.
 
 Once your health bar object is set up, create a new script called `EnemyHealth.cs` and attach it to the health bar (**not the health bar background**).
 
-You will be provided with some starter code here - the task requirement is to finish implementing the code to achieve the required functionality.
+You will be provided with some starter code here - the task requirement is to **finish implementing the code** to achieve the required functionality.
 
 ```csharp
 using System.Collections;
@@ -72,17 +72,17 @@ Setup:
 - Add a `CircleCollider2D` to the bullet prefab and make it a trigger.
 - Add a new script to the bullet prefab: `Bullet.cs`
 - Your `Enemy` prefab will require a `Rigidbody2D` and a collider. Consider which type of `Rigidbody2D` is appropriate in this case (dynamic vs kinematic)
-- The `Enemy` prefab should also be given the "Enemy" tag. (if this tag doesn't exist in your project, create it manually and make sure it's assigned to the enemy).
+- The `Enemy` prefab should also be given the "Enemy" tag. (if this tag doesn't exist in your project, create it manually and **make sure it's assigned to the enemy**).
 
-You will need to create your bullet script from scratch. The script should do the following:
+You will need to create your bullet script **from scratch.** The script should do the following:
 
-- Define damage, speed and a target for the bullet.
-- Make the bullet move towards the target over time based on its speed (`Vector2.MoveTowards` may come in handy).
+- Define **damage**, **speed** and a **target** for the bullet.
+- Make the bullet **move towards the target over time** based on its **speed** (`Vector2.MoveTowards` may come in handy).
 - The bullet's target could be destroyed by another bullet while it is traveling. If the target no longer exists, this bullet should destroy itself.
 - When the bullet's trigger enters another collider, check to see if that collider was an enemy. If it was, resolve the collision with the enemy.
-- When resolving a collision with an enemy, the bullet should find a reference to the enemy's health (`GetComponentInChildren` could be useful).
-- The bullet should reduce the enemy's current health by its damage value.
-- If this damage reduces the enemy's health to 0 or lower, the enemy should be destroyed. Award some `Gold` to the player via the `GameManager`.
+- When resolving a collision with an enemy, the bullet should find a reference to the enemy's **health** (`GetComponentInChildren` could be useful).
+- The bullet should **reduce the enemy's current health** by its **damage** value.
+- If this damage reduces the enemy's health to **0 or lower**, the enemy should be **destroyed**. Award some `Gold` to the player via the `GameManager`.
 - Regardless of whether or not the enemy was destroyed, the bullet should then be destroyed.
 
 
@@ -100,7 +100,7 @@ Setup:
 - Your `Monster` prefab should use a `CircleCollider2D` that is a trigger to define its firing range.
 - The `Monster` prefab should have its physics layer set to **Ignore Raycast**. This will ensure the collider doesn't block our clicks that are intended for the `MonsterSlot` beneath it. 
 
-Create a new script and call it `EnemyShooter.cs`. Start with the following code:
+Create a new script and call it `EnemyShooter.cs`. Build upon the following starter code:
 
 **Where there is a comment marked "TODO", you must implement that functionality yourself.**
 
@@ -137,33 +137,33 @@ public class EnemyShooter : MonoBehaviour
 
 ```
 
-If you have implemented this step successfully, your towers should fire bullets at the enemies as they enter into range of the tower. A tower should stop firing at an enemy if that enemy is no longer within range.
+If you have implemented this step successfully, your towers should **fire bullets** at the enemies **as they enter into range** of the tower. A tower should **stop** firing at an enemy **if that enemy is no longer within range**.
 
 Check the resources folder for an example video of how this should look.
 
 
 ## Bullet Tiers
 
-Upgrading our towers (monsters) currently doesn't make them any stronger, which is a bit disappointing. Ideally, each tier of tower should shoot a more powerful bullet than the one before it.
+Upgrading our towers (monsters) currently doesn't make them any stronger, which is a bit disappointing. Ideally, each tier of tower should shoot a **more powerful bullet** than the one before it.
 
 To complete this task:
 
-- You should have 3 different bullet prefabs, each using a different bullet sprite and dealing successively higher amounts of damage.
-- Each monster level should fire a different bullet (monster 0 should fire the weakest bullet, monster 2 should fire the strongest).
-- Each monster level should fire at a quicker rate.
+- You should have **3 different bullet prefabs**, each using a different bullet sprite and dealing successively higher amounts of damage.
+- Each monster level should fire a **different bullet** (monster 0 should fire the weakest bullet, monster 2 should fire the strongest).
+- Each monster level should fire at a **quicker rate.**
 
 > Tip: We already define the monster levels in our `MonsterData` script. We could define the bullet and fire rate for each level here as well.
 
 
 ## Advanced Features
 
-Implement these advanced features. These tasks are self-directed and will require some independent research and problem-solving.
+Implement these advanced features. These tasks are **self-directed** and will require some **independent research** and **problem-solving.**
 
-- Have towers rotate to face the enemy they are targeting.
-- Have towers prioritize the enemy closest to the cookie (remember, this is how far the enemy is along the path, not direct distance between the enemy and the cookie).
-- Play sound effects for the following in-game occurences:
+- Have towers **rotate** to face the enemy they are targeting.
+- Have towers **prioritize** the enemy **closest** to the cookie (remember, this is how far the enemy is along the path, not direct distance between the enemy and the cookie).
+- Play **sound effects** for the following in-game occurences:
     - A tower is placed
     - A tower fires a bullet
     - An enemy is destroyed
     - A life is lost
-- Implement Enemy 2. Make this enemy faster and tougher than the default enemy, and have them spawn at later waves.
+- Implement **Enemy 2**. Make this enemy faster and tougher than the default enemy, and have them spawn at later waves.
