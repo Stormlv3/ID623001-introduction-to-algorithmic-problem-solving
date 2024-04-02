@@ -1,4 +1,4 @@
-# 01: Game Mechanics Assessment Tasks
+# 02: Game Mechanics Assessment Tasks
 
 For this assessment task, we will make our towers shoot at the enemies, and be able to defeat them.
 
@@ -92,6 +92,8 @@ You can test if your code is working by placing an enemy and a bullet in the sce
 
 > Resource: <https://docs.unity3d.com/ScriptReference/Component.GetComponentInChildren.html>
 
+> Resource: <https://docs.unity3d.com/ScriptReference/Object.Destroy.html>
+
 ## Targeting Enemies
 
 Our towers need to be able to identify enemies within range and attack them.
@@ -126,7 +128,7 @@ public class EnemyShooter : MonoBehaviour
     public void Shoot(GameObject target) 
     {
         // TODO: Instantiate a bullet, set its target to the enemy we want to shoot.
-        // Make sure we update our lastShotTime.
+        // Make sure we update our lastShotTime to Time.time (see resource below).
     }
 
     // TODO: When an object with the "Enemy" tag enters EnemyShooter's trigger, it should add that enemy's GameObject to its list of enemies who are in range.
@@ -138,6 +140,8 @@ public class EnemyShooter : MonoBehaviour
 ```
 
 If you have implemented this step successfully, your towers should **fire bullets** at the enemies **as they enter into range** of the tower. A tower should **stop** firing at an enemy **if that enemy is no longer within range**.
+
+> Resource: <https://docs.unity3d.com/ScriptReference/Time-time.html>
 
 Check the resources folder for an example video of how this should look.
 
@@ -153,7 +157,6 @@ To complete this task:
 - Each monster level should fire at a **quicker rate.**
 
 > Tip: We already define the monster levels in our `MonsterData` script. We could define the bullet and fire rate for each level here as well.
-
 
 ## Advanced Features
 
