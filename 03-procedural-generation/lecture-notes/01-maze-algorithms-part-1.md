@@ -171,9 +171,9 @@ public int[,] GenerateMazeDataFromDimensions(int numRows, int numCols)
         int[,] maze = new int[numRows, numCols];
         float placementThreshold = 0.1f; // How likely we are to place a cell (0.1 == a 90% chance).
 
-        for (var x = 0; x < numRows; x++) // Iterate over columns.
+        for (var x = 0; x < numRows; x++) // Iterate over rows.
         {
-            for (var y = 0; y < numCols; y++) // Iterate over rows.
+            for (var y = 0; y < numCols; y++) // Iterate over columns.
             {
                 if (x == 0 || y == 0 || x == numRows - 1 || y == numCols - 1) // If we're on an edge...
                 {
