@@ -12,13 +12,13 @@ Before we continue, it is important that we have a basic understanding of the fu
 - A **mesh** is a collection of vertices, connected by edges to form faces. A sufficiently detailed mesh can create any 3D object imaginable.
 
 This is a Blender resource, but the first section of the article recaps what is written above ^
-Resource: <https://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/What_is_a_Mesh%3F>
+> Resource: <https://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/What_is_a_Mesh%3F>
 
-# Task 1: Generating a Mesh
+## Task 1: Generating a Mesh
 
 Before we can make our entire maze, let's get some practice making meshes in code.
 
-A `Mesh` is a Unity class that is used to represent a 3D mesh. A `Mesh` instance can be assigned to a `MeshFilter` component with a `MeshRenderer` to display it ingame.
+A `Mesh` is a Unity class that is used to represent a **3D mesh.** A `Mesh` instance can be assigned to a `MeshFilter` component with a `MeshRenderer` to display it ingame.
 
 We are going to define a basic type of mesh, called a **quad**. A quad is just a flat, 4-sided shape in 3D space. This is the kind of thing that's best explained with an example, so here is some example code to demonstrate a typical process for setting up a mesh:
 
@@ -76,19 +76,19 @@ public Mesh TestMesh()
 
 ```
 
-Resource: <https://docs.unity3d.com/ScriptReference/Mesh.html>
+> Resource: <https://docs.unity3d.com/ScriptReference/Mesh.html>
 
 Looks like a lot (and it kinda is - there's a reason people invented 3DS Max and Maya). The basic process is:
-- Make a list of all the vertices (points) you would like to include in your mesh
-- Make a list of how you want those points to be connected (triangles)
-- Slap some UV coordinates in (really, just copy the code for this)
-- Declare your new mesh and assign everything to it.
+- Make a list of all the **vertices** (points) you would like to include in your **mesh**
+- Make a list of how you want those points to be connected (**triangles**)
+- Slap some **UV coordinates** in (really, just copy the code for this)
+- Declare your **new mesh** and assign everything to it.
 
 Badaboom, we have a quad mesh. This is the only type of mesh we are going to use for our maze - each segment of the maze will simply be several quads rotated in various ways.
 
-Actually making it render:
+### Actually making it render:
 
-Your first task is to take this quad generation code and get the `Mesh` it generates to render on the screen.
+Your first task is to take this quad generation code and get the `Mesh` it generates to **render** on the screen.
 
 To do this, you will need to consider the following:
 
@@ -100,15 +100,15 @@ To do this, you will need to consider the following:
     - Add a `MeshRenderer` component. This is responsible for assigning a material to our mesh so that we can actually see it.
     - Assign a material to that `MeshRenderer`. The material we are going to use can be found in the project and is called "wall-mat".
 
-You may also like to temporarily place a camera in your scene. Remember to remove it later once we get to the first person character implementation.
+> Tip: You may also like to temporarily place a camera in your scene. Remember to remove it later once we get to the first person character implementation.
 
 If you managed to get this working, and you assigned your maze generator component to a game object in the scene, you should see a new `GameObject` get created when you run your game. This game object should appear as a flat one-sided wall with a dark brown material on it.
 
-# Task 2: Transformations
+## Task 2: Transformations
 
 This quad is neat, but you can imagine how difficult it would be to calculate each vertex of our maze, and connect them all up, making sure that the triangles are all correct.
 
-Thankfully, we can transform quads just like we would move, rotate and scale an object in the editor. We'll be able to make many copies of this quad, all transformed differently to create our maze.
+Thankfully, we can **transform** quads just like we would move, rotate and scale an object in the editor. We'll be able to make many copies of this quad, all transformed differently to create our maze.
 
 The best way to do this is with a Translation, Rotation and Scale **Matrix**, or in Unity terms: `Matrix4x4TRS`.
 We can define a `Matrix4x4TRS` as though it were a transformation we were going to make to a game object in the Unity editor, then apply it to all the vertices in our mesh with the `.MultiplyPoint3x4` method. Here's an example:
@@ -142,10 +142,10 @@ public void TransformTestMesh(Mesh testMesh)
 
 With this example in hand, do some experimentation.
 
-- Create 3 individual meshes from your mesh generator class.
-- Each mesh should be positioned differently in the world.
-- One mesh should be rotated differently than the others.
-- One mesh should be scaled differently from the others.
+- Create 3 **individual meshes** from your mesh generator class.
+- Each mesh should be **positioned** differently in the world.
+- One mesh should be **rotated** differently than the others.
+- One mesh should be **scaled** differently from the others.
 
 
 # Task 3: The Maze
@@ -237,7 +237,7 @@ public class MazeMeshGenerator : MonoBehaviour
     // We have to provide a matrix that will perform a transformation on the vertices.
     // newVertices, newUVs and newTriangles are all passed in using the "ref" keyword.
     // This allows us to cumultaively build up a massive list of vertices, UVs and tris
-    // as we loop through the data arrays.
+    // as we loop through the data arrays, which will ultimately get assigned to the mesh.
     private void AddQuad(Matrix4x4 matrix, ref List<Vector3> newVertices,
         ref List<Vector2> newUVs, ref List<int> newTriangles)
     {
@@ -278,17 +278,11 @@ public class MazeMeshGenerator : MonoBehaviour
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MazeMeshGenerator
+public class MazeMeshGenerator : MonoBehaviour
 {
     // generator params
-    public float width;     // how wide are hallways
-    public float height;    // how tall are hallways
-
-    public MazeMeshGenerator()
-    {
-        width = 3.75f;
-        height = 3.5f;
-    }
+    public float width = 3.75f;     // how wide are hallways
+    public float height = 3.5f;    // how tall are hallways
 
     public Mesh GenerateMazeMeshFromData(int[,] data)
     {
