@@ -22,7 +22,7 @@ Once your player prefab is set up correctly, try placing it in the scene and run
 
 Obviously, this isn't an ideal setup, so we are going to position the player in code when the game starts.
 
-# Task 1: Positioning the Player
+## Task 1: Positioning the Player
 
 To complete this task, your player prefab should be dynamically instantiated in the scene and positioned correctly in the center of the first open slot of the maze, so that when the game is played, the player is immediately standing on the floor at the start of the maze.
 
@@ -79,7 +79,7 @@ public class GameSetup: MonoBehaviour
 
 </details>
 
-# Task 2: Adding the Monster
+## Task 2: Adding the Monster
 
 Completing this task will be similar to the first. While the player is placed at the start of the maze, however, the monster should be placed at the end of the maze. This means the maze cell with the maximum co-ordinates should be chosen as the monster's spawn location. Setup the monster prefab - you can replace its model with something else if you want to give your game a unique flair - and instantiate/position it in code as we did with the player.
 
@@ -111,7 +111,7 @@ public void GenerateMonster()
 
 </details>
 
-# Task 3: Adding the Treasure
+## Task 3: Adding the Treasure
 
 The final task is to add a goal for the player to reach. You should create the treasure prefab from scratch, using a default cube mesh textured with the "treasure" material. This prefab should be generated in the same way as the monster, although instead of spawning at the end of the maze, it should choose a random open cell that is a reasonable distance away from the player's spawn point.
 
@@ -146,6 +146,7 @@ private void CreateTreasure()
     int zCoord = UnityEngine.Random.Range(cols - 5, cols - 2);
 
     // Keep trying random cells until we find an open one or we've tried 1000 times.
+    // IMPORTANT: This is assuming a public accessor 'Data' added to the maze constructor.
     int repeats = 0;
     while (mazeConstructor.Data[zCoord, xCoord] != 0 && repeats < 1000)
     {
@@ -161,3 +162,7 @@ private void CreateTreasure()
 ```
 
 </details>
+
+## Summary
+
+If you have successfully implemented object spawning, you should have a player that can run around the maze when the game is played, a monster who currently lurks at the end of the maze but doesn't do anything, and a golden treasure that spawns somewhere inside the maze somewhere near the monster.
