@@ -2,15 +2,13 @@
 
 We have successfully used procedural generation to create a random 3D maze for our game!
 
-Today's class will be focused on adding some fundamental gameplay mechanics to our game, including player controls and win/loss states. Afterall, what use is a maze that we can't explore?
+Today's class will be focused on adding some fundamental gameplay mechanics to our game, including player controls and object spawning. Afterall, what use is a maze that we can't explore?
 
 ## Mechanics
 
 Today we will implement the following mechanics to the maze game:
 - Player controls + movement
-- Win state
-- Loss State
-- Maze Reset
+- Player, monster and treasure spawning
 
 ## Player Controls
 
