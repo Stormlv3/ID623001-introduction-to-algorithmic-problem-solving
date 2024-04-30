@@ -33,7 +33,7 @@ Now that we are starting to deal with multiple different systems (maze generator
 If your player prefab is setup correctly, and instantiated correctly in code, you should be able to navigate the maze in first-person when playing the game.
 
 <details>
-<header>Solution Example</header>
+<summary>Solution Example</summary>
 
 Now that our code is growing more complex, we should consider how it is structured. The **Single Responsibility Principle** states that each class in our program should only be have one job. It doesn't really make sense that our maze generator should be performing other initialization tasks such as setting up the player, when all it should care about is creating the maze.
 
@@ -84,7 +84,7 @@ public class GameSetup: MonoBehaviour
 Completing this task will be similar to the first. While the player is placed at the start of the maze, however, the monster should be placed at the end of the maze. This means the maze cell with the maximum co-ordinates should be chosen as the monster's spawn location. Setup the monster prefab - you can replace its model with something else if you want to give your game a unique flair - and instantiate/position it in code as we did with the player.
 
 <details>
-<header>Solution Example</header>
+<summary>Solution Example</summary>
 
 ```csharp
 
@@ -122,7 +122,7 @@ The final task is to add a goal for the player to reach. You should create the t
 
 
 <details>
-<header>Solution Example</header>
+<summary>Solution Example</summary>
 
 Assuming that you have setup a treasure prefab:
 
