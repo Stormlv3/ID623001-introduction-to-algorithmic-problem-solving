@@ -145,7 +145,8 @@ public class MazeConstructor: MonoBehaviour{
 
     public void GenerateNodeGraph(int sizeRows, int sizeCols)
     {
-        // Set Graph to a new 2D Node array, and populate it based on data.
+        // TODO: Implement this function.
+        // You will need to set Graph to a new 2D Node array, and populate it based on our "data" field.
     }
 }
 
