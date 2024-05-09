@@ -1,30 +1,18 @@
 # 06: Pathfinding
 
-We now have all of the building blocks we need to get our pathfinding algorithm working. Today we will implement the recursive algorithm that will perform all of the pathfinding logic.
+We now have all of the building blocks we need to get our pathfinding algorithm working. Today we will implement the algorithm that will perform all of the pathfinding logic.
 
-## Recursion
+## Algorithm concepts
 
-**Recursion** is a programming concept whereby a problem is defined in terms of itself. Practically, **recursion** manifests as a function that calls itself until some condition is met. In order for an algorithm to be recursive, the following properties must apply to it:
+Today's class is all about giving you a starting point from which to construct the most important part of the pathfinding algorithm. You have the entire class to focus on this one piece of code, so make the most of the time available, and give yourself up to 2 hours to work on the problem before looking at the solution example.
 
-- The algorithm has a base case (a way of stopping)
-- The algorithm works towards the base case (by breaking down the problem into a simpler step)
-- The algorithm calls itself
+### Closed + Open Lists
 
-How does this apply to our pathfinding?
+A* stores 2 lists in working memory: `closedList` and `openList`. These are both lists of nodes and each is core to the functionality of A*.
+- `closedList` holds all the nodes that have already been considered.
+- `openList` holds all the nodes that are yet to be considered, but which we could potentially choose as our next node to consider.
 
-### Recursion in pathfinding
-
-We can think about the problem of finding a path in these terms:
-
-- If we are at the end node, return it
-- If we are not at the end node, take a step towards the end node
-- Do this again
-
-Framing our pathfinding problem in these terms allows us to consider it as a recursive algorithm.
-
-- _If we are at the end node, return it_ **<- Base Case**
-- _If we are not at the end node, take a step towards the end node_ **<- Break down the problem**
-- _Do this again_ **<- Algorithm calls itself**
+Our algorithm will continuously update these lists based on the status of our search. If we run out of open nodes to consider, we couldn't find a path to the end node. If we find ourselves considering the end node, we can trace back the path we took to get there and return that as a path (ordered list of nodes).
 
 ## Today's Task
 
@@ -113,12 +101,11 @@ public class Pathfinder : MonoBehaviour
         startNode.gCost = 0;
         startNode.hCost = CalculateDistance(startNode, endNode);
          
+        // This is the heart of the algorithm:
         while (openList.Count > 0) 
         {
             // Consider the lowest fCost node.
             Node currentNode = GetLowestFCostNode(openList);
-            
-            // TODO: implement this loop. I'll break it into conceptual blocks for you to work out:
 
             // TODO: if the current node is the end node, return the path (use the CalculatePath method).
 
@@ -134,14 +121,9 @@ public class Pathfinder : MonoBehaviour
             // TODO: If we get to the end of the while loop and our base condition hasn't been met, we couldn't
             // find a path. Return null.
         }
-
-        
-
-        
-
     }
-
 }
+```
 
 <details>
 
@@ -150,65 +132,67 @@ public class Pathfinder : MonoBehaviour
 ```csharp
 public List<Node> FindPath(int startX, int startY, int endX, int endY)
 {
-    Node startNode = graph[startX,startY];
-    Node endNode = graph[endX, endY];
+    Node startNode = Graph[startX, startY];
+    Node endNode = Graph[endX, endY];
 
     List<Node> openList = new List<Node> { startNode };
     List<Node> closedList = new List<Node>();
 
-    int graphWidth = graph.GetLength(0);
-    int graphHeight = graph.GetLength(1);
+    int graphWidth = Graph.GetLength(0);
+    int graphHeight = Graph.GetLength(1);
 
-    for(int x = 0; x < graphWidth; x++)
-        for(int y = 0; y < graphHeight; y++)
+    for (int x = 0; x < graphWidth; x++)
+        for (int y = 0; y < graphHeight; y++)
         {
-            Node pathNode = graph[x, y];
+            Node pathNode = Graph[x, y];
             pathNode.gCost = int.MaxValue;
-            pathNode.CalculateFCost();
-            pathNode.cameFromNode = null;
+            pathNode.prevNode = null;
         }
 
     startNode.gCost = 0;
-    startNode.hCost = CalculateDistanceCost(startNode, endNode);
-    startNode.CalculateFCost();
+    startNode.hCost = CalculateDistance(startNode, endNode); 
 
-    while(openList.Count > 0)
+    while (openList.Count > 0)
     {
         Node currentNode = GetLowestFCostNode(openList);
-        if(currentNode == endNode)
+        if (currentNode == endNode)
             return CalculatePath(endNode);
 
         openList.Remove(currentNode);
         closedList.Add(currentNode);
 
-        foreach(Node neighbourNode in GetNeighbourList(currentNode)){
-            if(closedList.Contains(neighbourNode)) continue;
+        foreach (Node neighbourNode in GetNeighbourList(currentNode))
+        {
+            if (closedList.Contains(neighbourNode)) continue;
 
-            if(!neighbourNode.isWalkable){
+            if (!neighbourNode.isWalkable)
+            {
                 closedList.Add(neighbourNode);
                 continue;
             }
 
-            int tentativeGCost = currentNode.gCost + CalculateDistanceCost(currentNode, neighbourNode);
-            if(tentativeGCost < neighbourNode.gCost){
-                neighbourNode.cameFromNode = currentNode;
+            int tentativeGCost = currentNode.gCost + CalculateDistance(currentNode, neighbourNode);
+            if (tentativeGCost < neighbourNode.gCost)
+            {
+                neighbourNode.prevNode = currentNode;
                 neighbourNode.gCost = tentativeGCost;
-                neighbourNode.hCost = CalculateDistanceCost(neighbourNode, endNode);
-                neighbourNode.CalculateFCost();
+                neighbourNode.hCost = CalculateDistance(neighbourNode, endNode);
 
-                if(!openList.Contains(neighbourNode))
+                if (!openList.Contains(neighbourNode))
                     openList.Add(neighbourNode);
             }
         }
     }
-
-    //out of nodes on the open list
     return null;
 }
 ```
 
 </details>
 
+## Summary
 
+If implemented correctly, your Line Renderer should show a path through the maze between the nodes that you specified in the start method. Note that depending on which nodes you selected, there is the potential that no path is possible (if you chose a node which was closed.)
+
+Next class we will be starting on the assessment tasks for assessment 3.
 
 
