@@ -16,7 +16,7 @@ Our algorithm will continuously update these lists based on the status of our se
 
 ## Today's Task
 
-In your `Pathfinder.cs` script, create a method called `FindPath`. Use the following code as a starting point:
+In your `Pathfinder.cs` script, implement the method called `FindPath`. Use the following code as a starting point:
 
 ```csharp
 public class Pathfinder : MonoBehaviour 
