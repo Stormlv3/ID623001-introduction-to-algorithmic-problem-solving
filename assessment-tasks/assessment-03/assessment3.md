@@ -90,7 +90,7 @@ The size of the maze should be random each time the scene runs. There will need 
 To complete this task, your game should generate a maze with random dimensions each time the scene is loaded, with some considerations:
 - Each dimension should be constrained between 9-25 cells
 - The maze should still only be allowed to have an odd number of cells in both dimensions
-- Ensure that the monster and treasure spawns take these new dimensions into account when determining their span locations
+- Ensure that the monster and treasure spawns take these new dimensions into account when determining their spawn locations
 
 ## Audio Cues
 
