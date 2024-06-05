@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 526753307576256834}
   - component: {fileID: 526753307576256835}
   - component: {fileID: 526753307576256836}
+  - component: {fileID: 5898442370791695737}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 526753307576256837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c15859c89cf4a0449ae81d8a2ef35dfa, type: 3}
+  m_Script: {fileID: 11500000, guid: 76c30c67d4ef8934a80aa5b2a5330978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   headCam: {fileID: 526753307724655355}
@@ -70,6 +71,19 @@ MonoBehaviour:
   sensitivityVert: 9
   minimumVert: -45
   maximumVert: 45
+--- !u!65 &5898442370791695737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526753307576256837}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &526753307724655359
 GameObject:
   m_ObjectHideFlags: 0

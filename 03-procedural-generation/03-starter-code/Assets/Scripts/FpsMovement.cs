@@ -1,10 +1,4 @@
-﻿/*
- * written by Joseph Hocking 2017
- * released under MIT license
- * text of license https://opensource.org/licenses/MIT
- */
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,9 +7,10 @@ using UnityEngine;
 // basic WASD-style movement control
 public class FpsMovement : MonoBehaviour
 {
-    [SerializeField] private Camera headCam;
+    [SerializeField] public Camera headCam;
 
     public float speed = 6.0f;
+    public float sprintSpeedMultiplier = 2.0f; // Adjust as needed
     public float gravity = -9.8f;
 
     public float sensitivityHor = 9.0f;
@@ -31,6 +26,8 @@ public class FpsMovement : MonoBehaviour
     void Start()
     {
         charController = GetComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked; // Lock cursor
+        Cursor.visible = false; // Hide cursor
     }
 
     void Update()
@@ -47,6 +44,12 @@ public class FpsMovement : MonoBehaviour
 
         Vector3 movement = new Vector3(deltaX, 0, deltaZ);
         movement = Vector3.ClampMagnitude(movement, speed);
+
+        // Sprinting
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            movement *= sprintSpeedMultiplier;
+        }
 
         movement.y = gravity;
         movement *= Time.deltaTime;
