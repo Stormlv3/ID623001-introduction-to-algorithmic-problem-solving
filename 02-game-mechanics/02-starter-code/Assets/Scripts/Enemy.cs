@@ -20,6 +20,9 @@ public class Enemy : MonoBehaviour
     {
         if (currentWaypointIndex == waypoints.Length)
         {
+            //GameManager.Instance.healthIndicators
+            Destroy(gameObject);
+            GameManager.Instance.Health -= 1;
             return;
         }
 
