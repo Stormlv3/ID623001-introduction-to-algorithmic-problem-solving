@@ -77,6 +77,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 5
   dropDestroyDelay: 5
+  FeedbackHeart: {fileID: 6424702231390705047, guid: a032a7a98a8fb0d478906a70059a7bea,
+    type: 3}
 --- !u!1001 &7707425619109021037
 PrefabInstance:
   m_ObjectHideFlags: 0

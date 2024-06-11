@@ -16,6 +16,8 @@ public class Sheep : MonoBehaviour
     private Collider myCollider;
     private Rigidbody myRigidbody;
 
+    public GameObject FeedbackHeart;
+
     private void Awake()
     {
         myCollider = GetComponent<BoxCollider>();
@@ -34,7 +36,11 @@ public class Sheep : MonoBehaviour
 
     public void EatHay()
     {
+        Vector3 heartPosition = transform.position + new Vector3(0, 5, 0);
+        Quaternion heartRotation = transform.rotation * Quaternion.Euler(-90, 0, 0);
+        Instantiate(FeedbackHeart, heartPosition, heartRotation);
         OnAteHay?.Invoke(this);
+
     }
 
     private void Drop()
@@ -52,9 +58,10 @@ public class Sheep : MonoBehaviour
         if (other.CompareTag("Hay"))
         {
             Destroy(other.gameObject);
-            HitByHay();
             EatHay();
+            HitByHay();
         }
+
         // Collided with edge of map:
         else if (other.CompareTag("DropSheep") && !dropped)
         {
