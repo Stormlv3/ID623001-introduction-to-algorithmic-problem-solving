@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,7 +16,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnHealthSet = new UnityEvent();
     public UnityEvent OnGameOver = new UnityEvent();
     private int health;
-    
+
     public int Health
     {
         get { return health; }
@@ -47,7 +46,7 @@ public class GameManager : MonoBehaviour
     {
         if (Instance != null)
         {
-            Destroy(this);
+            Destroy(gameObject);
             return;
         }
         Instance = this;
@@ -57,5 +56,10 @@ public class GameManager : MonoBehaviour
     {
         Gold = StartingGold;
         Health = StartingHealth;
+    }
+
+    public void AddGold(int amount)
+    {
+        Gold += amount;
     }
 }

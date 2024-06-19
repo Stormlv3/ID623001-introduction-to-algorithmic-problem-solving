@@ -1,31 +1,48 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour 
+public class EnemyHealth : MonoBehaviour
 {
     public float maxHealth = 100;
     public float currentHealth = 100;
     private float originalXScale;
+    public GameObject enemyParent;
 
-    private void Start() 
+
+    private void Start()
     {
         // The health bar takes note of its initial x scale, so that it can
         // rescale itself relative to that initial scale.
         originalXScale = gameObject.transform.localScale.x;
     }
 
-    private void Update() 
+    private void Update()
     {
-        // newScale is going to be what we set the scale to. Initially, it's
-        // just whatever the current scale is.
+        // Get the current scale of the gameObject.
         Vector3 newScale = gameObject.transform.localScale;
-        
-        // TODO: Update the x value of newScale. The new value should be a number
-        // between 0 and originalXScale based on our currentHealth and maxHealth
-        // I.E. if currentHealth is 0, x scale should be 0. If currentHealth
-        // == maxHealth, then x scale should be originalXScale.
 
+        // Calculate the health percentage.
+        float healthPercentage = currentHealth / maxHealth;
+
+        // Update the x scale based on the health percentage.
+        newScale.x = originalXScale * healthPercentage;
+
+        // Apply the new scale to the gameObject.
         gameObject.transform.localScale = newScale;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        // Reduce current health by the damage amount
+        currentHealth -= damage;
+
+        // Check if current health is <= 0
+        if (currentHealth <= 0)
+        {
+            // If health is 0 or less, destroy the enemy
+            Destroy(enemyParent);
+
+            // Award gold to the player (You need to implement GameManager for this)
+            GameManager.Instance.AddGold(50); // Example: Add 10 gold to player's total
+        }
     }
 }

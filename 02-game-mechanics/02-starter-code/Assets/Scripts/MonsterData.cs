@@ -1,16 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class MonsterData : MonoBehaviour
 {
-
     [System.Serializable]
     public class MonsterLevel
     {
-        public int cost; 
-        public GameObject visualization;
+        public int cost;
+        public GameObject sprite;
+        public GameObject bulletPrefab;
+        public float bulletSpeed;
+        public int bulletDamage;
+        public float shootCooldown; // Added shootCooldown property
     }
 
     public List<MonsterLevel> levels;
@@ -22,7 +23,6 @@ public class MonsterData : MonoBehaviour
         CurrentLevel = levels[0];
     }
 
-
     public MonsterLevel CurrentLevel
     {
         get { return currentLevel; }
@@ -33,11 +33,11 @@ public class MonsterData : MonoBehaviour
             {
                 if (level == currentLevel)
                 {
-                    level.visualization.SetActive(true);
+                    level.sprite.SetActive(true);
                 }
                 else
                 {
-                    level.visualization.SetActive(false);
+                    level.sprite.SetActive(false);
                 }
             }
         }
