@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events; 
 
 public class Sheep : MonoBehaviour
@@ -26,16 +24,21 @@ public class Sheep : MonoBehaviour
 
     private void Update()
     {
+        // Make the sheep move forward
         transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
     }
 
     private void HitByHay()
     {
+        // If in contact with the hay destory the sheep
         Destroy(gameObject);
     }
 
     public void EatHay()
     {
+        // When hay is eaten play the appropriate sound effect and tween animation. Also, increase score
+        SFXManager.Instance.PlaySheepHitSFX();
+        GameManager.Instance.SaveSheep();
         Vector3 heartPosition = transform.position + new Vector3(0, 5, 0);
         Quaternion heartRotation = transform.rotation * Quaternion.Euler(-90, 0, 0);
         Instantiate(FeedbackHeart, heartPosition, heartRotation);
@@ -45,6 +48,9 @@ public class Sheep : MonoBehaviour
 
     private void Drop()
     {
+        // If sheep drops off map, play appropriate sound effect, remove a life and animate the sheep falling
+        SFXManager.Instance.PlaySheepDropSFX();
+        GameManager.Instance.DroppedSheep();
         dropped = true;
         myRigidbody.useGravity = true;
         myCollider.isTrigger = false;
@@ -54,7 +60,7 @@ public class Sheep : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Collided with hay:
+        // Collided with hay
         if (other.CompareTag("Hay"))
         {
             Destroy(other.gameObject);
@@ -62,7 +68,7 @@ public class Sheep : MonoBehaviour
             HitByHay();
         }
 
-        // Collided with edge of map:
+        // Collided with edge of map (drop)
         else if (other.CompareTag("DropSheep") && !dropped)
         {
             Drop();

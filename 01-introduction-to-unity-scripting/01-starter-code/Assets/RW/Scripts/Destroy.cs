@@ -1,28 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
     public string tagFilter;
 
+
+    // Destroys the haybales if they reach the end zone (so they don't continue forever creating too many game objects)
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(tagFilter))
         {
             Destroy(gameObject);
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

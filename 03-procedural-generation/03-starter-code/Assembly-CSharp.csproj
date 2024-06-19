@@ -54,8 +54,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\FpsMovement.cs" />
     <Compile Include="Assets\Scripts\MazeConstructor.cs" />
-    <Compile Include="Assets\Scripts\TriggerEventRouter.cs" />
     <Compile Include="Assets\Scripts\MazeMeshGenerator.cs" />
+    <Compile Include="Assets\Scripts\TriggerEventRouter.cs" />
     <Compile Include="Assets\Scripts\GameSetup.cs" />
   </ItemGroup>
   <ItemGroup>

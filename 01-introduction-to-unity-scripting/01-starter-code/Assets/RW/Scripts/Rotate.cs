@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
@@ -8,15 +6,14 @@ public class Rotate : MonoBehaviour
     public float RotationSpeedMax = 100f;
     private float rotationSpeed;
 
-    // Start is called before the first frame update
     void Start()
     {
+        // Choose random rotate speed
         rotationSpeed = Random.Range(RotationSpeedMin, RotationSpeedMax);
     }
-
-    // Update is called once per frame
     void Update()
     {
+        // Roate the windmil wheel around axis
         transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
     }
 }

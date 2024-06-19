@@ -1,19 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Vector3 MovementSpeed = new Vector3(0f, 0f, 10f);
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Vector3 MovementSpeed = new Vector3(0f, 0f, 25f);
 
-    // Update is called once per frame
     void Update()
     {
+        // Handle hay movement speed
         transform.Translate(MovementSpeed * Time.deltaTime);
     }
 }

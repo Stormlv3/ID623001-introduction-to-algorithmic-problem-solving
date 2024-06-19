@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdee43db9e4791e42bbe0ed2f6eff019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 5
+  runSpeed: 10
   dropDestroyDelay: 5
   FeedbackHeart: {fileID: 6424702231390705047, guid: a032a7a98a8fb0d478906a70059a7bea,
     type: 3}
