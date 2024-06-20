@@ -20,6 +20,7 @@ public class EnemyShooter : MonoBehaviour
             {
                 // Shoot at the first available enemy
                 Shoot(enemiesInRange[0]);
+                SFXManager.Instance.PlayShootSFX();
             }
         }
     }
@@ -47,6 +48,11 @@ public class EnemyShooter : MonoBehaviour
         MonsterData.MonsterLevel currentLevel = monsterData.CurrentLevel;
         float bulletSpeed = currentLevel.bulletSpeed;
 
+        // Calculate direction and set rotation of the EnemyShooter
+        Vector3 direction = (target.transform.position - transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180f; // Adjust by 180 degrees
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
         // Instantiate a bullet and set its properties
         GameObject bullet = Instantiate(currentLevel.bulletPrefab, transform.position, Quaternion.identity);
         Bullet bulletComponent = bullet.GetComponent<Bullet>();
@@ -59,6 +65,9 @@ public class EnemyShooter : MonoBehaviour
         // Update lastShotTime
         lastShotTime = Time.time;
     }
+
+
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {

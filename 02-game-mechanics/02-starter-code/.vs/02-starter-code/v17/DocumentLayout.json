@@ -3,40 +3,48 @@
   "WorkspaceRootPath": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|c:\\unity\\id623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\userinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\userinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\enemyshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\monsterdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\monsterdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\enemyshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|c:\\unity\\id623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\sfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\menuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\userinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\userinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\monsterdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\monsterdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\monsterslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\monsterslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAFD1FDB-218C-AE80-688A-61B7C28F8F97}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,84 +54,104 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "MenuUI.cs",
+              "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\MenuUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MenuUI.cs",
+              "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\MenuUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MenuUI.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T03:56:43.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SFXManager.cs",
+              "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\SFXManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SFXManager.cs",
+              "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\SFXManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SFXManager.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwC8AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T03:09:55.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "EnemyShooter.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\EnemyShooter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyShooter.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\EnemyShooter.cs",
               "RelativeToolTip": "Assets\\Scripts\\EnemyShooter.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAYwFEAAAAAAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAIwBYAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:38:10.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T12:38:10.094Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\Bullet.cs",
               "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:25:25.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T12:25:25.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "MonsterData.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\MonsterData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MonsterData.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\MonsterData.cs",
               "RelativeToolTip": "Assets\\Scripts\\MonsterData.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAYwEcAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T14:13:01.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T14:13:01.817Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "EnemyHealth.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\EnemyHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyHealth.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\EnemyHealth.cs",
               "RelativeToolTip": "Assets\\Scripts\\EnemyHealth.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAABXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:20:26.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T12:20:26.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EnemySpawner.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\EnemySpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemySpawner.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\EnemySpawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\EnemySpawner.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAANAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAkwFgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T15:01:37.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T15:01:37.113Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "UserInterface.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\UserInterface.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UserInterface.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\UserInterface.cs",
               "RelativeToolTip": "Assets\\Scripts\\UserInterface.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAYwDoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T14:49:21.118Z"
+              "WhenOpened": "2024-06-04T14:49:21.118Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -133,32 +161,31 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\Enemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T14:56:49.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAEAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T14:29:57.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T14:29:57.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MonsterSlot.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\MonsterSlot.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MonsterSlot.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\02-game-mechanics\\02-starter-code\\Assets\\Scripts\\MonsterSlot.cs",
               "RelativeToolTip": "Assets\\Scripts\\MonsterSlot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAABCAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T13:58:50.561Z"
             }

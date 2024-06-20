@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic; // Include this namespace for List<T>
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +13,7 @@ public class GameManager : MonoBehaviour
     public int StartingHealth = 5;
     private int gold;
 
-    public GameObject[] healthIndicators;
+    public List<GameObject> healthIndicators;
 
     public bool gameOver = false;
     public UnityEvent OnHealthSet = new UnityEvent();
@@ -24,6 +27,18 @@ public class GameManager : MonoBehaviour
         {
             health = value;
             OnHealthSet?.Invoke();
+
+            if (health < StartingHealth)
+            {
+                SFXManager.Instance.PlayLifeLostSFX();
+                if (healthIndicators.Count > 0)
+                {
+                    int randomIndex = Random.Range(0, healthIndicators.Count);
+                    healthIndicators[randomIndex].SetActive(false);
+                    healthIndicators.RemoveAt(randomIndex);
+                }
+            }
+
             if (health <= 0 && !gameOver)
             {
                 OnGameOver?.Invoke();

@@ -30,6 +30,7 @@ public class MonsterSlot : MonoBehaviour
 
     public void UpgradeMonster()
     {
+        SFXManager.Instance.PlayTowerPlaced();
         placedMonster.IncreaseLevel();
         GameManager.Instance.Gold -= placedMonster.CurrentLevel.cost;
     }
@@ -41,6 +42,7 @@ public class MonsterSlot : MonoBehaviour
 
     public void PlaceMonster()
     {
+        SFXManager.Instance.PlayTowerPlaced();
         placedMonster = Instantiate(MonsterPrefab, transform.position, Quaternion.identity);
         GameManager.Instance.Gold -= MonsterPrefab.levels[0].cost;
     }

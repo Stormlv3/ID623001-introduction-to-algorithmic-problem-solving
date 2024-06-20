@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UserInterface : MonoBehaviour
@@ -10,6 +12,7 @@ public class UserInterface : MonoBehaviour
     [SerializeField] private Animator topHalfWaveStartLabel;
     [SerializeField] private Animator bottomHalfWaveStartLabel;
     [SerializeField] private Animator gameOverLabel;
+    [SerializeField] private Animator gameWonLabel;
 
     private void Awake()
     {
@@ -17,6 +20,7 @@ public class UserInterface : MonoBehaviour
         EnemySpawner.OnWaveStarted.AddListener(HandleWaveStarted);
         GameManager.Instance.OnHealthSet.AddListener(HandleHealthSet);
         GameManager.Instance.OnGameOver.AddListener(HandleGameOver);
+        EnemySpawner.OnGameWon.AddListener(HandleGameWon);
     }
 
     private void HandleGoldSet()
@@ -32,8 +36,6 @@ public class UserInterface : MonoBehaviour
     private void HandleWaveStarted()
     {
         waveLabel.text = "WAVE: " + (EnemySpawner.currentWaveIndex + 1).ToString();
-        // Fire off the animation for both label halves. When played at the same time, these
-        // create a flashy effect.
         topHalfWaveStartLabel.SetTrigger("nextWave");
         bottomHalfWaveStartLabel.SetTrigger("nextWave");
     }
@@ -41,5 +43,24 @@ public class UserInterface : MonoBehaviour
     private void HandleGameOver()
     {
         gameOverLabel.SetTrigger("gameOver");
+        StartCoroutine(GameOverCoroutine());
+    }
+
+    private void HandleGameWon()
+    {
+        gameWonLabel.SetTrigger("gameWon");
+        StartCoroutine(GameWonCoroutine());
+    }
+
+    private IEnumerator GameOverCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(2); // Load the game over scene
+    }
+
+    private IEnumerator GameWonCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(3); // Load the win scene
     }
 }

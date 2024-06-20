@@ -11,7 +11,7 @@ public class MonsterData : MonoBehaviour
         public GameObject bulletPrefab;
         public float bulletSpeed;
         public int bulletDamage;
-        public float shootCooldown; // Added shootCooldown property
+        public float shootCooldown;
     }
 
     public List<MonsterLevel> levels;

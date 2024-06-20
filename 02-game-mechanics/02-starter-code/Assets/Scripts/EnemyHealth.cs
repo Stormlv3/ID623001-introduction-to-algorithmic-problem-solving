@@ -38,6 +38,7 @@ public class EnemyHealth : MonoBehaviour
         // Check if current health is <= 0
         if (currentHealth <= 0)
         {
+            SFXManager.Instance.PlayEnemyDeathSFX();
             // If health is 0 or less, destroy the enemy
             Destroy(enemyParent);
 
