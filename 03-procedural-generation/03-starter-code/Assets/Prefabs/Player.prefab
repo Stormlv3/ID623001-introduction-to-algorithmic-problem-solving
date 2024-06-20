@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5898442370791695737}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,6 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headCam: {fileID: 526753307724655355}
   speed: 6
+  sprintSpeedMultiplier: 2
   gravity: -9.8
   sensitivityHor: 9
   sensitivityVert: 9

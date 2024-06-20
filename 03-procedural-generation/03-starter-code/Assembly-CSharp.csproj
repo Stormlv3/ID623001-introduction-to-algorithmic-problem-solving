@@ -57,6 +57,8 @@
     <Compile Include="Assets\Scripts\MazeMeshGenerator.cs" />
     <Compile Include="Assets\Scripts\TriggerEventRouter.cs" />
     <Compile Include="Assets\Scripts\GameSetup.cs" />
+    <Compile Include="Assets\Scripts\Node.cs" />
+    <Compile Include="Assets\Scripts\PathFinder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
