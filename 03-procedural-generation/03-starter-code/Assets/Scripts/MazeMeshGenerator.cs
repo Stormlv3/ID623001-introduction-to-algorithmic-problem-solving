@@ -1,9 +1,19 @@
-﻿using System.Collections.Generic;
+﻿/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script turns the maze created into MazeConstructor into the physical
+/// maze that the player will run around in. i.e it makes the walls, floors and roof.
+/// This also includes adding the correct material for each component.
+
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MazeMeshGenerator : MonoBehaviour
 {
     public MazeConstructor mazeContructor;
+
     // width of the maze cells
     public float width = 3.75f;
 
@@ -14,8 +24,6 @@ public class MazeMeshGenerator : MonoBehaviour
     {
         // create a new instance of MazeConstructor
         MazeConstructor mazeConstructor = new MazeConstructor();
-        // generate maze data with specified dimensions
-        // int[,] mazeData = mazeConstructor.GenerateMazeDataFromDimensions(30, 30);
 
         // generate the maze using the generated data
         GenerateMaze(mazeContructor.Data);
@@ -42,7 +50,6 @@ public class MazeMeshGenerator : MonoBehaviour
     {
         // create a new mesh for the floor
         Mesh floorMesh = new Mesh();
-        // lists to store vertices, uvs, and triangles for the floor mesh
         List<Vector3> vertices = new List<Vector3>();
         List<Vector2> uvs = new List<Vector2>();
         List<int> triangles = new List<int>();
@@ -57,13 +64,11 @@ public class MazeMeshGenerator : MonoBehaviour
         {
             for (int j = 0; j <= cMax; j++)
             {
-                // if the cell is not a wall (value != 1)...
                 if (data[i, j] != 1)
                 {
-                    // generate a quad for the floor at the cell position
                     AddQuad(Matrix4x4.TRS(
                         new Vector3(j * width, 0, i * width),
-                        Quaternion.LookRotation(Vector3.down),  // rotated 180 degrees
+                        Quaternion.LookRotation(Vector3.down),
                         new Vector3(width, width, 1)
                     ), ref vertices, ref uvs, ref triangles);
                 }
@@ -89,7 +94,6 @@ public class MazeMeshGenerator : MonoBehaviour
     {
         // create a new mesh for the roof
         Mesh roofMesh = new Mesh();
-        // lists to store vertices, uvs, and triangles for the roof mesh
         List<Vector3> vertices = new List<Vector3>();
         List<Vector2> uvs = new List<Vector2>();
         List<int> triangles = new List<int>();
@@ -104,13 +108,11 @@ public class MazeMeshGenerator : MonoBehaviour
         {
             for (int j = 0; j <= cMax; j++)
             {
-                // if the cell is not a wall (value != 1)...
                 if (data[i, j] != 1)
                 {
-                    // generate a quad for the roof at the cell position
                     AddQuad(Matrix4x4.TRS(
                         new Vector3(j * width, height, i * width),
-                        Quaternion.LookRotation(Vector3.up),  // rotated 180 degrees
+                        Quaternion.LookRotation(Vector3.up),
                         new Vector3(width, width, 1)
                     ), ref vertices, ref uvs, ref triangles);
                 }
@@ -132,7 +134,6 @@ public class MazeMeshGenerator : MonoBehaviour
     {
         // create a new mesh for the walls
         Mesh wallMesh = new Mesh();
-        // lists to store vertices, uvs, and triangles for the wall mesh
         List<Vector3> vertices = new List<Vector3>();
         List<Vector2> uvs = new List<Vector2>();
         List<int> triangles = new List<int>();
@@ -149,7 +150,6 @@ public class MazeMeshGenerator : MonoBehaviour
         {
             for (int j = 0; j <= cMax; j++)
             {
-                // if the cell is not a wall (value != 1)...
                 if (data[i, j] != 1)
                 {
                     // generate quads for the walls based on the neighboring cells
@@ -184,7 +184,6 @@ public class MazeMeshGenerator : MonoBehaviour
             }
         }
 
-        // assign the vertices, uvs, and triangles to the wall mesh
         wallMesh.vertices = vertices.ToArray();
         wallMesh.uv = uvs.ToArray();
         wallMesh.triangles = triangles.ToArray();
@@ -231,7 +230,6 @@ public class MazeMeshGenerator : MonoBehaviour
     {
         // create a new GameObject for the maze part
         GameObject mazePart = new GameObject(name);
-        // position it at the world origin
         mazePart.transform.position = Vector3.zero;
 
         // add a MeshFilter component and assign the mesh

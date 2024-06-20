@@ -1,3 +1,11 @@
+/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: Main music restarts on each scene loading -
+///       - this should have been fixed by not destroying the music on scene load.
+/// 
+/// This script handles the sound effects played throughout the game.
+
 using UnityEngine;
 
 public class SFXManager : MonoBehaviour

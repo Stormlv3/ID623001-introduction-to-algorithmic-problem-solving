@@ -1,7 +1,18 @@
-﻿using UnityEngine;
+﻿/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script places objects in the maze, namely the player, treasure, and monster.
+/// It also manages the win and loss states of the game.
+
+using UnityEngine;
+using UnityEngine.UI;
 
 public class GameSetup : MonoBehaviour
 {
+    public static GameSetup Instance;
+
     [SerializeField] private MazeMeshGenerator mazeMeshGenerator;
     [SerializeField] private MazeConstructor mazeConstructor;
 
@@ -9,75 +20,183 @@ public class GameSetup : MonoBehaviour
     [SerializeField] private GameObject monsterPrefab;
     [SerializeField] private GameObject treasurePrefab;
 
+    [SerializeField] private Text UIText;
+
     private int[,] mazeData;
     private int rows;
     private int cols;
 
+    private GameObject playerInstance;
+    private GameObject monsterInstance;
+    private GameObject treasureInstance;
+
+    private bool gameEnded = false;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void Start()
     {
-        // Initialize our game state
         mazeData = mazeConstructor.GenerateMazeDataFromDimensions(rows, cols);
 
+        // Generate the maze mesh from the data
         mazeMeshGenerator.GenerateMaze(mazeData);
 
-        // generate the player at the start of the game
+        // Generate the player at the start of the game
         GeneratePlayer();
 
-        // generate the monster at the end of the maze
+        // Generate the monster at the end of the maze
         GenerateMonster();
 
-        // generate the treasure in a reasonable distance from the player's spawn point
+        // Generate the treasure
         GenerateTreasure();
     }
 
     public void GeneratePlayer()
     {
-        // coordinates for the player's starting position
+        // Coordinates for the player's starting position
         int xCoord = 1;
         int zCoord = 1;
-        // calculate the starting position for the player based on maze cell width
+        // Calculate the starting position for the player
         Vector3 startPos = new Vector3(xCoord * mazeMeshGenerator.width, 1, zCoord * mazeMeshGenerator.width);
 
-        // instantiate the player controller at the calculated starting position
-        GameObject player = Instantiate(playerControllerPrefab, startPos, Quaternion.identity);
+        // Instantiate the player
+        playerInstance = Instantiate(playerControllerPrefab, startPos, Quaternion.identity);
     }
 
     public void GenerateMonster()
     {
-        // Ensure rows and cols are initialized correctly
         int rows = mazeConstructor.Data.GetLength(0);
         int cols = mazeConstructor.Data.GetLength(1);
-        // -1 would place the monster inside the final cell, which is closed. 
-        // -2 places it in the first guaranteed open cell (assuming your maze has odd-numbered rows + cols)
+        // Set coordinates for the monster's starting position near the end of the maze
         int xCoord = rows - 2;
         int zCoord = cols - 2;
         Vector3 startPos = new Vector3(xCoord * mazeMeshGenerator.width, 0, zCoord * mazeMeshGenerator.width);
-        GameObject newMonster = Instantiate(monsterPrefab, startPos, Quaternion.identity);
+        monsterInstance = Instantiate(monsterPrefab, startPos, Quaternion.identity);
     }
 
     private void GenerateTreasure()
     {
-        // Ensure rows and cols are initialized correctly
         int rows = mazeConstructor.Data.GetLength(0);
         int cols = mazeConstructor.Data.GetLength(1);
 
-        // Assuming your maze is at least 6x6.
+        // Set initial coordinates for the treasure's position
         int xCoord = UnityEngine.Random.Range(rows - 5, rows - 2);
         int zCoord = UnityEngine.Random.Range(cols - 5, cols - 2);
 
-        // Keep trying random cells until we find an open one or we've tried 1000 times.
+        // Keep trying random cells until we find an open one or we've tried 500 times
         int repeats = 0;
-        while (mazeConstructor.Data[zCoord, xCoord] != 0 && repeats < 1000)
+        while (mazeConstructor.Data[zCoord, xCoord] != 0 && repeats < 500)
         {
             xCoord = UnityEngine.Random.Range(rows - 5, rows - 2);
             zCoord = UnityEngine.Random.Range(cols - 5, cols - 2);
             repeats++;
         }
 
-        // Spawn the treasure.
+        // Spawn the treasure
         Vector3 treasurePos = new Vector3(xCoord * mazeMeshGenerator.width, 0, zCoord * mazeMeshGenerator.width);
-        GameObject treasure = Instantiate(treasurePrefab, treasurePos, Quaternion.identity);
+        treasureInstance = Instantiate(treasurePrefab, treasurePos, Quaternion.identity);
     }
 
+    public void GameWon()
+    {
+        // Set gameEnded flag to true
+        gameEnded = true;
+
+        // Display win text on UI
+        UIText.text = "You Escaped!";
+        UIText.gameObject.SetActive(true);
+
+        // Play audio
+        PlayTreasureAudio();
+
+        // Disable controls
+        DisablePlayerControls();
+
+        // Disable monster pathfinding
+        DisableMonsterPathfinding();
+
+        // Restart the game
+        Invoke("RestartGame", 3f);
+    }
+
+    public void GameLose()
+    {
+        gameEnded = true;
+
+        // Display lose text
+        UIText.text = "You Were Caught!";
+        UIText.gameObject.SetActive(true);
+
+        // Play audio
+        PlayPlayerAudio();
+
+        // Disable controls
+        DisablePlayerControls();
+
+        // Restart the game
+        Invoke("RestartGame", 3f);
+    }
+
+
+    private void PlayPlayerAudio()
+    {
+        if (playerInstance != null)
+        {
+            AudioSource audioSource = playerInstance.GetComponent<AudioSource>();
+            if (audioSource != null)
+            {
+                // Play the audio source on the player
+                audioSource.Play();
+            }
+        }
+    }
+
+    private void PlayTreasureAudio()
+    {
+        if (treasureInstance != null)
+        {
+            AudioSource audioSource = treasureInstance.GetComponent<AudioSource>();
+            if (audioSource != null)
+            {
+                // Play the audio source on the treasure
+                audioSource.Play();
+            }
+        }
+    }
+
+    private void DisablePlayerControls()
+    {
+        if (playerInstance != null)
+        {
+            FpsMovement playerController = playerInstance.GetComponent<FpsMovement>();
+            if (playerController != null)
+            {
+                // Disable the player controller script
+                playerController.enabled = false;
+            }
+        }
+    }
+
+    private void DisableMonsterPathfinding()
+    {
+        if (monsterInstance != null)
+        {
+            PathFinder monsterPathfinding = monsterInstance.GetComponent<PathFinder>();
+            if (monsterPathfinding != null)
+            {
+                // Disable the monster pathfinding script
+                monsterPathfinding.enabled = false;
+            }
+        }
+    }
+
+
+    private void RestartGame()
+    {
+        // Reload the scene to restart the game
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
 }

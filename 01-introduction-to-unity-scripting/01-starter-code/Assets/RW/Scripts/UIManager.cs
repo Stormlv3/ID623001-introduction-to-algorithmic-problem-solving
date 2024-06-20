@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/// 
+/// Author: Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script manages the ingame UI, such as score and health.
+
+using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 

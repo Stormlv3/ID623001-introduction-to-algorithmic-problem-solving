@@ -1,3 +1,10 @@
+/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script handles the shooting of bullets from the monsters.
+
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/// 
+/// Author: Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script manages all the sound effects that play throughout the game.
+
+using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {

@@ -1,4 +1,13 @@
-﻿using UnityEngine;
+﻿/// 
+/// Author: Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+///
+/// This class handles the majority of the core gameplay
+/// Such as keeping track of the sheep that have been saved
+/// or dropped. Additionally it handles the game over state.
+
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour

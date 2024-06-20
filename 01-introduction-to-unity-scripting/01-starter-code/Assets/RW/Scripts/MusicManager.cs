@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/// 
+/// Author: Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script manages the music that plays throughout the game.
+
+using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {

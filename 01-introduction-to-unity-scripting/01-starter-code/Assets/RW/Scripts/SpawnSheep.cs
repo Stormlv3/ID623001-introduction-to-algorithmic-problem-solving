@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/// 
+/// Author: Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script manages the spawning of the sheep.
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

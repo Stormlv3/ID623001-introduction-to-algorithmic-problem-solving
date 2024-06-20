@@ -1,3 +1,10 @@
+/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script manages the placement of the monsters on open slots.
+
 using UnityEngine;
 
 public class MonsterSlot : MonoBehaviour

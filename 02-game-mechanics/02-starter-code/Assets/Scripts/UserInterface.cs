@@ -1,3 +1,11 @@
+/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script handles the user interface, such as next wave, game
+/// over and game won. It also looks after the gold, current wave and health labels.
+
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;

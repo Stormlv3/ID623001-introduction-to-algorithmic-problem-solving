@@ -1,5 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script manages the movement of the enemies including their waypoints.
+
 using UnityEngine;
 
 public class Enemy : MonoBehaviour

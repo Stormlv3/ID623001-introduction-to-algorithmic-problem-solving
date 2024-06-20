@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/// 
+/// Author: Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script manages the destruction of the haybales once they reach the end of the map.
+
+using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {

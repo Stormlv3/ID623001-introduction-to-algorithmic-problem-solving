@@ -1,3 +1,12 @@
+/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script manages the spawning of enemies as well
+/// as the wave system. It also destroy's all enemies once
+/// the game is over.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,10 @@
+/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script handles the enemy health, taking damage.
+
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour

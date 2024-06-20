@@ -1,4 +1,13 @@
-﻿using System.Collections;
+﻿/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: Enemy often gets stuck in the pathfinding, typically at corners.
+///       It also often moves through walls, meaning it passes over non-walkable
+///       space which shouldn't be happening.
+/// 
+/// This script is responsible for the monster's movement throughout the maze.
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +16,7 @@ public class PathFinder : MonoBehaviour
     public MazeConstructor MazeConstructor;
     public float MoveSpeed = 5f;
     public LineRenderer LR;
-    public Node[,] Graph { get { return MazeConstructor.Graph; } }
+    public Node[,] Graph { get { return MazeConstructor.Graph; } } // Access to the graph from the MazeConstructor
 
     private Transform Player;
     private Transform Monster;
@@ -15,6 +24,7 @@ public class PathFinder : MonoBehaviour
     private const int MOVE_DIAGONAL_COST = 14;
     private const int MOVE_STRAIGHT_COST = 10;
 
+    // Calculate the distance between two nodes
     public int CalculateDistance(Node from, Node to)
     {
         int xDistance = Mathf.Abs(from.x - to.x);
@@ -25,6 +35,7 @@ public class PathFinder : MonoBehaviour
         return diagonalCost + straightCost;
     }
 
+    // Get a list of walkable neighbor nodes for the current node
     private List<Node> GetNeighbourList(Node currentNode)
     {
         List<Node> neighbourList = new List<Node>();
@@ -44,7 +55,7 @@ public class PathFinder : MonoBehaviour
         return neighbourList;
     }
 
-
+    // Get the node with the lowest fCost from the list of nodes
     private Node GetLowestFCostNode(List<Node> nodeList)
     {
         Node lowestFCostNode = nodeList[0];
@@ -58,6 +69,7 @@ public class PathFinder : MonoBehaviour
         return lowestFCostNode;
     }
 
+    // Calculate the path from the end node to the start node
     private List<Node> CalculatePath(Node endNode)
     {
         List<Node> path = new List<Node>();
@@ -72,6 +84,7 @@ public class PathFinder : MonoBehaviour
         return path;
     }
 
+    // Find the path from the start coordinates to the end coordinates
     public List<Node> FindPath(int startX, int startY, int endX, int endY)
     {
         Node startNode = Graph[startX, startY];
@@ -83,6 +96,7 @@ public class PathFinder : MonoBehaviour
         int graphWidth = Graph.GetLength(0);
         int graphHeight = Graph.GetLength(1);
 
+        // Initialize all nodes
         for (int x = 0; x < graphWidth; x++)
         {
             for (int y = 0; y < graphHeight; y++)
@@ -139,6 +153,7 @@ public class PathFinder : MonoBehaviour
         StartCoroutine(WaitForObjects());
     }
 
+    // Coroutine to wait until Player and Monster objects are found
     private IEnumerator WaitForObjects()
     {
         while (GameObject.FindGameObjectWithTag("Player") == null || GameObject.FindGameObjectWithTag("Monster") == null)
@@ -149,7 +164,6 @@ public class PathFinder : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         Monster = GameObject.FindGameObjectWithTag("Monster").transform;
     }
-
 
     private void Update()
     {

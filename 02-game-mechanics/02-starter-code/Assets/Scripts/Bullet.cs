@@ -1,3 +1,10 @@
+/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script handles the bullet movement once it is instantiated.
+
 using UnityEngine;
 
 public class Bullet : MonoBehaviour

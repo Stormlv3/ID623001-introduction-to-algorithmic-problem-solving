@@ -1,24 +1,27 @@
-﻿/*
- * written by Joseph Hocking 2017
- * released under MIT license
- * text of license https://opensource.org/licenses/MIT
- */
+﻿/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This handles the triggers for win and loose states.
 
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
-public delegate void TriggerEventHandler(GameObject trigger, GameObject other);
 
 public class TriggerEventRouter : MonoBehaviour
 {
-    public TriggerEventHandler callback;
-
     void OnTriggerEnter(Collider other)
     {
-        if (callback != null)
+        // If tag is monster then game over
+        if (other.CompareTag("Monster"))
         {
-            callback(this.gameObject, other.gameObject);
+            GameSetup.Instance.GameLose();
+        }
+        // Else if tag is treasure then game won
+        else if (other.CompareTag("Treasure"))
+        {
+            GameSetup.Instance.GameWon();
         }
     }
 }

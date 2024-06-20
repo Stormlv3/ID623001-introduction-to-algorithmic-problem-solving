@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/// 
+/// Author: Lucas Storm
+/// May 2024
+/// Bugs: None known at this time.
+/// 
+/// This script is used to rotate the windmill blades.
+
+using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {

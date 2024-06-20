@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿/// 
+/// Author: Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script handles the sheep, such as movement and what happens
+/// when they are hit by a haybale or when they drop off the map.
+
+using UnityEngine;
 using UnityEngine.Events; 
 
 public class Sheep : MonoBehaviour

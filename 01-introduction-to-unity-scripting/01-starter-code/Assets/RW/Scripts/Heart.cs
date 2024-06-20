@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/// 
+/// Author: Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script manages the animation of the heart effect.
+
+using UnityEngine;
 using DG.Tweening;
 
 public class Heart : MonoBehaviour

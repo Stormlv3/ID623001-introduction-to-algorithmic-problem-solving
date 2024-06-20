@@ -1,3 +1,11 @@
+/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script contains the stats for the monsters and
+/// handles the upgrades of them as well.
+
 using System.Collections.Generic;
 using UnityEngine;
 

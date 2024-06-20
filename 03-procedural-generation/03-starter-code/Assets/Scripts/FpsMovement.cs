@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script handles the player movement.
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +17,7 @@ public class FpsMovement : MonoBehaviour
     [SerializeField] public Camera headCam;
 
     public float speed = 6.0f;
-    public float sprintSpeedMultiplier = 2.0f; // Adjust as needed
+    public float sprintSpeedMultiplier = 2.0f; // Sprint Multiplier
     public float gravity = -9.8f;
 
     public float sensitivityHor = 9.0f;
@@ -45,7 +52,7 @@ public class FpsMovement : MonoBehaviour
         Vector3 movement = new Vector3(deltaX, 0, deltaZ);
         movement = Vector3.ClampMagnitude(movement, speed);
 
-        // Sprinting
+        // Handle Sprinting
         if (Input.GetKey(KeyCode.LeftShift))
         {
             movement *= sprintSpeedMultiplier;

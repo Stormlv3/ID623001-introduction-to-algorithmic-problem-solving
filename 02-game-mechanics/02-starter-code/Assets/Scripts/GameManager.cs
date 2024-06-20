@@ -1,7 +1,12 @@
+/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script manages the gold and health, it also passes on when the game is over.
+
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
-using System.Collections;
 using System.Collections.Generic; // Include this namespace for List<T>
 
 public class GameManager : MonoBehaviour

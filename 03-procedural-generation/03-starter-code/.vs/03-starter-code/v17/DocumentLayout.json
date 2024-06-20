@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|c:\\unity\\id623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\assets\\scripts\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\assets\\scripts\\gamesetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamesetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\assets\\scripts\\triggereventrouter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\triggereventrouter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|c:\\unity\\id623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\assets\\scripts\\growl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\growl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\assets\\scripts\\mazemeshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mazemeshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\assets\\scripts\\fpsmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fpsmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\assets\\scripts\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,16 +31,8 @@
       "RelativeMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mazeconstructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\assets\\scripts\\gamesetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamesetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\assets\\scripts\\mazemeshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mazemeshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\assets\\scripts\\fpsmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fpsmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|c:\\unity\\id623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\assets\\scripts\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CC60A6-B43D-3403-700B-DB31C80FF7BD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +42,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Growl.cs",
+              "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\Growl.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Growl.cs",
+              "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\Growl.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Growl.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T17:02:40.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TriggerEventRouter.cs",
+              "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\TriggerEventRouter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TriggerEventRouter.cs",
+              "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\TriggerEventRouter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TriggerEventRouter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T16:43:06.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "PathFinder.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\PathFinder.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PathFinder.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\PathFinder.cs",
               "RelativeToolTip": "Assets\\Scripts\\PathFinder.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAswMEAAAABAAAA",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAswLMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-20T12:14:20.371Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "MazeConstructor.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\MazeConstructor.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MazeConstructor.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\MazeConstructor.cs",
               "RelativeToolTip": "Assets\\Scripts\\MazeConstructor.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAwHwAAAABAAAA",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAewIUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T17:49:25.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Node.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\Node.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Node.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\Node.cs",
               "RelativeToolTip": "Assets\\Scripts\\Node.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-20T11:46:14.229Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "FpsMovement.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\FpsMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FpsMovement.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\FpsMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\FpsMovement.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwEsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T19:08:34.697Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "GameSetup.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\GameSetup.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameSetup.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\GameSetup.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameSetup.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwFIAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T18:22:21.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MazeMeshGenerator.cs",
               "DocumentMoniker": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\MazeMeshGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MazeMeshGenerator.cs",
               "ToolTip": "C:\\Unity\\ID623001-introduction-to-algorithmic-problem-solving\\03-procedural-generation\\03-starter-code\\Assets\\Scripts\\MazeMeshGenerator.cs",
               "RelativeToolTip": "Assets\\Scripts\\MazeMeshGenerator.cs",
-              "ViewState": "AQIAAMMAAAAAAAAAAAAYwNMAAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T17:49:29.231Z",
               "EditorCaption": ""

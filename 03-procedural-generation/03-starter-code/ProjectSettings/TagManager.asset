@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Generated
   - Monster
+  - Treasure
   layers:
   - Default
   - TransparentFX

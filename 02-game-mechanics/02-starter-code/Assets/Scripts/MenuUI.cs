@@ -1,4 +1,10 @@
-using TMPro;
+/// 
+/// Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script handles the button presses in the main menu.
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿/// 
+/// Author: Lucas Storm
+/// May 2024
+/// Bugs: None known at this time.
+/// 
+/// This script handles the movement and shooting that the
+/// hay machine does.
+
+using UnityEngine;
 
 public class HayMachine : MonoBehaviour
 {

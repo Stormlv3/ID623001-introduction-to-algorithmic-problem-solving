@@ -1,4 +1,11 @@
-﻿using TMPro;
+﻿/// 
+/// Author: Lucas Storm
+/// June 2024
+/// Bugs: None known at this time.
+/// 
+/// This script handles button presses on the main menu.
+
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
