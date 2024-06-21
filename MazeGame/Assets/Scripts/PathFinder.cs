@@ -1,11 +1,9 @@
 ﻿/// 
 /// Lucas Storm
 /// June 2024
-/// Bugs: Enemy often gets stuck in the pathfinding, typically at corners.
-///       It also often moves through walls, meaning it passes over non-walkable
-///       space which shouldn't be happening.
+/// Bugs: Sometimes the enemy stops before the player, meaning you could stand still and never die.
 /// 
-/// This script is responsible for the monster's movement throughout the maze.
+/// This script is responsible for the monster's movement throughout the maze as well as generating the path in which the monster takes.
 
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +14,7 @@ public class PathFinder : MonoBehaviour
     public MazeConstructor MazeConstructor;
     public float MoveSpeed = 5f;
     public LineRenderer LR;
+    public bool showLine;
     public Node[,] Graph { get { return MazeConstructor.Graph; } } // Access to the graph from the MazeConstructor
 
     private Transform Player;
@@ -205,16 +204,19 @@ public class PathFinder : MonoBehaviour
             }
         }
 
-        // Debug lines for visualizing the path
-        if (path != null)
+        if (showLine)
         {
-            List<Vector3> points = new List<Vector3>();
-            foreach (var node in path)
+            // Debug lines for visualizing the path
+            if (path != null)
             {
-                points.Add(new Vector3(node.y * MazeConstructor.GetComponent<MazeMeshGenerator>().width, 1f, node.x * MazeConstructor.GetComponent<MazeMeshGenerator>().width));
+                List<Vector3> points = new List<Vector3>();
+                foreach (var node in path)
+                {
+                    points.Add(new Vector3(node.y * MazeConstructor.GetComponent<MazeMeshGenerator>().width, 1f, node.x * MazeConstructor.GetComponent<MazeMeshGenerator>().width));
+                }
+                LR.positionCount = points.Count;
+                LR.SetPositions(points.ToArray());
             }
-            LR.positionCount = points.Count;
-            LR.SetPositions(points.ToArray());
         }
     }
 }

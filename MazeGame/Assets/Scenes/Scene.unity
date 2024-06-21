@@ -368,8 +368,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.054718018
-        value: 0.04081726
+        time: 0.0626564
+        value: 0.11628723
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -461,9 +461,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9ac0772916d33449cd1c209fcaec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showDebug: 1
-  rows: 11
-  cols: 11
+  showDebug: 0
+  rows: 19
+  cols: 19
 --- !u!4 &846320877
 Transform:
   m_ObjectHideFlags: 0
@@ -491,8 +491,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeContructor: {fileID: 846320876}
-  width: 5
-  height: 5
+  width: 2.5
+  height: 6
 --- !u!114 &846320879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,8 +506,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MazeConstructor: {fileID: 846320876}
-  MoveSpeed: 5
+  MoveSpeed: 10
   LR: {fileID: 808747600}
+  showLine: 0
 --- !u!1 &974588508
 GameObject:
   m_ObjectHideFlags: 0
