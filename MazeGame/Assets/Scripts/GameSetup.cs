@@ -30,6 +30,8 @@ public class GameSetup : MonoBehaviour
     private GameObject monsterInstance;
     private GameObject treasureInstance;
 
+    public GameObject pathFinderScript;
+
     private bool gameEnded = false;
 
     private void Awake()
@@ -167,6 +169,7 @@ public class GameSetup : MonoBehaviour
         }
     }
 
+    // Disable the player controls when the player wins/looses
     private void DisablePlayerControls()
     {
         if (playerInstance != null)
@@ -180,14 +183,14 @@ public class GameSetup : MonoBehaviour
         }
     }
 
+    // Disable the monster pathfinding when the player wins
     private void DisableMonsterPathfinding()
     {
-        if (monsterInstance != null)
+        if (pathFinderScript != null)
         {
-            PathFinder monsterPathfinding = monsterInstance.GetComponent<PathFinder>();
-            if (monsterPathfinding != null)
+            PathFinder monsterPathfinding = pathFinderScript.GetComponent<PathFinder>();
+            if (monsterInstance != null)
             {
-                // Disable the monster pathfinding script
                 monsterPathfinding.enabled = false;
             }
         }

@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MazeConstructor: {fileID: 846320876}
-  MoveSpeed: 10
+  MoveSpeed: 7
   LR: {fileID: 808747600}
   showLine: 0
 --- !u!1 &974588508
@@ -671,6 +671,7 @@ MonoBehaviour:
   monsterPrefab: {fileID: 895211356916686346, guid: 1082b64d8e8656546801b8265b51fbd8, type: 3}
   treasurePrefab: {fileID: 5643767306105597023, guid: 106083ba0bb4d25479d59210b0367357, type: 3}
   UIText: {fileID: 471504522}
+  pathFinderScript: {fileID: 846320875}
 --- !u!4 &1318702070
 Transform:
   m_ObjectHideFlags: 0
