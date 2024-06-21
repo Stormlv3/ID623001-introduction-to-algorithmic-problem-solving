@@ -16,8 +16,12 @@ public class MenuUI : MonoBehaviour
 
     private void Start()
     {
-        // Update score
-        scoreText.text = "Score: " + UIManager.Instance.score.ToString();
+        if (UIManager.Instance != null)
+        {
+            // Update score
+            scoreText.text = "Score: " + UIManager.Instance.score.ToString();
+        }
+        
     }
 
     public void OnStartButtonClicked()

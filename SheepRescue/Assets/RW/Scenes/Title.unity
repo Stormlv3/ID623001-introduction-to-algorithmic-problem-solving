@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.18055171, g: 0.22603497, b: 0.30707234, a: 1}
+  m_IndirectSpecularColor: {r: 0.1805515, g: 0.22603463, b: 0.30707175, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -278,14 +278,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.1
@@ -330,6 +322,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -369.762
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!1001 &440724454
@@ -339,14 +339,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.905103
@@ -390,6 +382,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -617.532
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
@@ -538,14 +538,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.627667
@@ -589,6 +581,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -507.511
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
@@ -685,14 +685,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.46
@@ -736,6 +728,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -414.378
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
@@ -856,14 +856,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
-      propertyPath: m_Name
-      value: Sheep
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.460769
@@ -920,6 +912,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
+      propertyPath: m_Name
+      value: Sheep
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
 --- !u!4 &638674332 stripped
@@ -941,14 +941,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.23694
@@ -1005,6 +997,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!1001 &765566731
@@ -1014,14 +1014,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.74
@@ -1078,6 +1070,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!1001 &853580662
@@ -1087,14 +1087,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.27
@@ -1147,6 +1139,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!4 &858033531 stripped
@@ -1168,14 +1168,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
-      propertyPath: m_Name
-      value: Sheep
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.490664
@@ -1231,6 +1223,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
+      propertyPath: m_Name
+      value: Sheep
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
@@ -1416,14 +1416,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.571753
@@ -1480,6 +1472,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!4 &1079522718 stripped
@@ -1501,14 +1501,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.055917
@@ -1556,6 +1548,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
@@ -1655,14 +1655,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.237497
@@ -1707,6 +1699,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -545.253
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!1001 &1269673703
@@ -1716,14 +1716,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.3872724
@@ -1768,6 +1760,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -572.917
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!1001 &1282725049
@@ -1777,14 +1777,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.421446
@@ -1829,6 +1821,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -168.813
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!4 &1309811124 stripped
@@ -1844,14 +1844,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.35
@@ -1895,6 +1887,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -465.726
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
@@ -2037,14 +2037,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.82
@@ -2088,6 +2080,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -372.593
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
@@ -2145,10 +2145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2275,14 +2275,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.103127
@@ -2339,6 +2331,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!4 &1524390768 stripped
@@ -2360,14 +2360,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.6163797
@@ -2412,6 +2404,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -575.747
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!4 &1590131659 stripped
@@ -2438,11 +2438,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1524613847715755805, guid: ff9c52423c3a7be49af987edf422bcff,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524613847152365358, guid: ff9c52423c3a7be49af987edf422bcff,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -2512,6 +2507,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000002
       objectReference: {fileID: 0}
+    - target: {fileID: 1524613847152365358, guid: ff9c52423c3a7be49af987edf422bcff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1524613847152365356, guid: ff9c52423c3a7be49af987edf422bcff,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2558,14 +2558,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.085312
@@ -2622,6 +2614,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!1001 &1865925240
@@ -2631,14 +2631,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.33
@@ -2683,6 +2675,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -372.593
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!4 &1964753839 stripped
@@ -2710,14 +2710,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 289565343}
     m_Modifications:
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_Name
-      value: Hay Bale
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.6923304
@@ -2770,6 +2762,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_Name
+      value: Hay Bale
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!1001 &1524613846732587527
@@ -2790,11 +2790,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1524613847715755805, guid: ff9c52423c3a7be49af987edf422bcff,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524613847152365358, guid: ff9c52423c3a7be49af987edf422bcff,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -2852,6 +2847,11 @@ PrefabInstance:
     - target: {fileID: 1524613847715755804, guid: ff9c52423c3a7be49af987edf422bcff,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524613847152365358, guid: ff9c52423c3a7be49af987edf422bcff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1524613847152365356, guid: ff9c52423c3a7be49af987edf422bcff,

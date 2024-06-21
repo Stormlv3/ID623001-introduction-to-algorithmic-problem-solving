@@ -13,12 +13,12 @@ public class GameSetup : MonoBehaviour
 {
     public static GameSetup Instance;
 
-    [SerializeField] private MazeMeshGenerator mazeMeshGenerator;
-    [SerializeField] private MazeConstructor mazeConstructor;
+    [SerializeField] private MazeMeshGenerator mazeMeshGenerator = null;
+    [SerializeField] private MazeConstructor mazeConstructor = null;
 
-    [SerializeField] private GameObject playerControllerPrefab;
-    [SerializeField] private GameObject monsterPrefab;
-    [SerializeField] private GameObject treasurePrefab;
+    [SerializeField] private GameObject playerControllerPrefab = null;
+    [SerializeField] private GameObject monsterPrefab = null;
+    [SerializeField] private GameObject treasurePrefab = null;
 
     [SerializeField] private Text UIText;
 

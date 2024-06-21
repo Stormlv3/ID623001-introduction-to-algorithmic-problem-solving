@@ -170,12 +170,24 @@ public class PathFinder : MonoBehaviour
         if (Player == null || Monster == null)
             return;
 
+        float width = MazeConstructor.GetComponent<MazeMeshGenerator>().width;
+
         // Calculate the path from monster to player
+        //
+        // I had an issue with this part for ages where the path was not being calculated correctly when the player move.
+        // Whne the player moved along the x axis it was removing a node on the z axis. This caused the monster to move
+        // through walls and the path to be updated incorrectly. To fix this I had to swap the z and x.
+        //
+        // For example I had:
+        // Mathf.RoundToInt(Monster.position.x / MazeConstructor.GetComponent<MazeMeshGenerator>().width),
+        // Mathf.RoundToInt(Monster.position.z / MazeConstructor.GetComponent<MazeMeshGenerator>().width),
+        // But had to change the monster.position from x to z. This then fixed the path generation.
         List<Node> path = FindPath(
-            Mathf.RoundToInt(Monster.position.x / MazeConstructor.GetComponent<MazeMeshGenerator>().width),
             Mathf.RoundToInt(Monster.position.z / MazeConstructor.GetComponent<MazeMeshGenerator>().width),
-            Mathf.RoundToInt(Player.position.x / MazeConstructor.GetComponent<MazeMeshGenerator>().width),
-            Mathf.RoundToInt(Player.position.z / MazeConstructor.GetComponent<MazeMeshGenerator>().width)
+            Mathf.RoundToInt(Monster.position.x / MazeConstructor.GetComponent<MazeMeshGenerator>().width),
+            Mathf.RoundToInt(Player.position.z / MazeConstructor.GetComponent<MazeMeshGenerator>().width),
+            Mathf.RoundToInt(Player.position.x / MazeConstructor.GetComponent<MazeMeshGenerator>().width)
+            
         );
 
         // Move monster along the calculated path
